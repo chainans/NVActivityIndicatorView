@@ -175,7 +175,7 @@ public final class NVActivityIndicatorPresenter {
 
     // MARK: - Helpers
 
-    private func show(with activityData: ActivityData) {
+    private func show(with activityData: ActivityData) -> UILabel {
         let containerView = UIView(frame: UIScreen.main.bounds)
 
         containerView.backgroundColor = activityData.backgroundColor
@@ -236,6 +236,8 @@ public final class NVActivityIndicatorPresenter {
         DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(activityData.minimumDisplayTime)) {
             self._hide()
         }
+
+        return messageLabel
     }
 
     private func _hide() {
