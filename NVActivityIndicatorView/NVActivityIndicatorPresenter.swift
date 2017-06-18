@@ -124,6 +124,7 @@ public final class NVActivityIndicatorPresenter {
 
     /// Shared instance of `NVActivityIndicatorPresenter`.
     public static let sharedInstance = NVActivityIndicatorPresenter()
+    public var myLabel: UILabel? = nil
 
     private init() {}
 
@@ -146,7 +147,7 @@ public final class NVActivityIndicatorPresenter {
                 return
             }
 
-            self.show(with: data)
+            myLabel = self.show(with: data)
             self.startAnimatingGroup.leave()
         }
     }
