@@ -147,7 +147,7 @@ public final class NVActivityIndicatorPresenter {
                 return
             }
 
-            myLabel = self.show(with: data)
+            self.myLabel = self.show(with: data)
             self.startAnimatingGroup.leave()
         }
     }
